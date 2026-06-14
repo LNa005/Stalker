@@ -48,6 +48,8 @@ Dentro del archivo, arriba del todo, puedes cambiar:
 
 ---
 
+ - Ahora funciona como app de bandeja, con pausar/salir/ver-tiempo, y registra el ocio diario en CSV. 
+
 <div align="center">
 
 *Hecho con mango loco, claudio y cautela.* 🥭🩷
