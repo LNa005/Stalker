@@ -21,6 +21,7 @@ import win32process
 import win32api
 import winsound
 import tkinter as tk
+import bandeja
 
 # ============================================================
 #  CONFIGURACIÓN  ·  edita esto a tu gusto
@@ -317,7 +318,13 @@ def main():
 
     print("Centinela del Tiempo en marcha. Ctrl+C para parar.")
 
+    bandeja.iniciar()
+
     while True:
+        if bandeja.estado.pausado:
+            time.sleep(1)
+            continue
+
         ahora = time.time()
 
         # --- Aviso nocturno (independiente del ocio) ---
@@ -358,6 +365,7 @@ def main():
         # --- Contador de ocio neto ---
         if estado == "ocio":
             ocio += INTERVALO
+            bandeja.estado.sumar_ocio(INTERVALO)
         elif estado == "productivo":
             ocio = max(0, ocio - INTERVALO * DESCUENTO_PRODUCTIVO)
             aviso_susurro = False  # si vuelves al lío, reseteo el aviso suave
