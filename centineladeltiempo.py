@@ -28,8 +28,8 @@ import bandeja
 # ============================================================
 
 INTERVALO = 5            # segundos entre comprobaciones
-UMBRAL_SUSURRO = 5 * 60      # ocio neto antes del primer aviso suave   (normal: 25*60)
-UMBRAL_DIALOGO = 10 * 60     # ocio neto antes de que te cuestione       (normal: 50*60)
+UMBRAL_SUSURRO = 25 * 60      # ocio neto antes del primer aviso suave   (normal: 25*60)
+UMBRAL_DIALOGO = 50 * 60     # ocio neto antes de que te cuestione       (normal: 50*60)
 AFK_LIMITE = 3 * 60      # sin teclado/ratón este tiempo = estás ausente
 
 # El tiempo productivo descuenta ocio a este ritmo (2 = lo resta el doble de rápido)
